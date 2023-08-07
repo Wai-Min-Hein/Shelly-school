@@ -1,0 +1,59 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700;800&display=swap');
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+*, *::after, *::before{
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+html{
+  font-family: 'Poppins', sans-serif;
+}
+.nav-link::before{
+  content:'';
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 0;
+  height: 3px;
+  background-color: #fdc12a;
+  border-radius: 1rem;
+  transition: all .3s ease-in;
+}
+.nav-link:hover::before{
+  width: 50%;
+}
+
+.single-teacher::before{
+  content:'';
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 30%;
+  height: 3px;
+  background-color: #fdc12a;
+  border-radius: 1rem;
+  transition: all .3s ease-in;
+}
+
+.single-teacher-box:hover .single-teacher::before{
+  width: 60%;
+}
+
+.swiper-pagination{
+  position: relative!important ;
+}
+
+.swiper-pagination-bullet-active{
+background-color: #fdc12a !important;
+width: 30px;
+height: 5px;
+border-radius: 2px !important;
+
+}
+
+
+/* npx tailwindcss -i ./src/App.css -o ./Css/output.css --watch */
