@@ -14,7 +14,7 @@ import Classes from "./Pages/Classes";
 import SingleClass from "./Pages/SingleClass";
 import Teachers from "./Pages/Teachers";
 import Event from "./Pages/Event";
-import SingleTeacher from "./Pages/Singleteacher";
+import SingleTeacher from "./Pages/SingleTeacher";
 import SingleEvent from "./Pages/SingleEvent";
 import Contact from "./Pages/Contact";
 
