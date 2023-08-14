@@ -2,8 +2,11 @@ import {AiOutlineTwitter} from 'react-icons/ai'
 import {AiOutlineCaretDown} from 'react-icons/ai'
 import {FaFacebookF} from 'react-icons/fa'
 import {FaLinkedinIn} from 'react-icons/fa'
+import { Link, useNavigate } from 'react-router-dom'
 
 const NavBar = () => {
+
+    const nav = useNavigate()
   return (
     <div className=' container px-[5rem] mx-auto'>
         <div className="flex items-center justify-between gap-24">
@@ -11,36 +14,43 @@ const NavBar = () => {
                 <img src="https://shelly.merku.love/wp-content/uploads/2021/07/logo.png" className='w-[2.5rem] h-[2.5rem]' alt="" />
             </div>
             <ul className='flex items-center justify-start gap-10 flex-1'>
+                <Link to={'/'}>
+                
                 <li className="capitalize text-md font-medium nav-link relative inline-block hover:text-primary duration-150 text-secondary">Home</li>
 
+                </Link>
                 
-                <li className="capitalize text-md font-medium nav-link relative inline-block hover:text-primary duration-150 text-secondary">about us</li>
+                <li onClick={() => nav('/about-us')} className="capitalize text-md font-medium nav-link relative inline-block hover:text-primary duration-150 text-secondary">about us</li>
+
+
                 <li className="capitalize text-md nav-link font-medium  relative  group flex items-center  justify-start gap-2">
-                    <span className='hover:text-primary duration-150 text-secondary'>classes</span>
+                    <span  onClick={() => nav('/classes')} className='hover:text-primary duration-150 text-secondary'>classes</span>
                     <AiOutlineCaretDown className='text-xs text-secondary'/>
-                    <span className='absolute top-[3rem] left-0 w-[10rem] bg-white h-[2rem] hidden group-hover:inline-block'>
-                        <span className='text-secondary shadow-lg px-5 py-2  '>Single Class</span>
+                    <span className='absolute top-[2rem] left-0 w-[10rem] bg-white h-[2rem] hidden group-hover:inline-block'>
+                        <span  onClick={() => nav('/single-class')} className='text-secondary shadow-lg px-5 py-2  '>Single Class</span>
                     </span>
                 </li>
                 
                 <li className="capitalize text-md nav-link font-medium  relative flex items-center  justify-start gap-2 group">
-                    <span className='hover:text-primary duration-150 text-secondary'>teacher</span>
+                    <span  onClick={() => nav('/teachers')} className='hover:text-primary duration-150 text-secondary'>teacher</span>
                     <AiOutlineCaretDown className='text-xs text-secondary'/>
 
-                    <span className='absolute top-[3rem] left-0 w-[10rem] bg-white h-[2rem] hidden group-hover:inline-block'>
-                        <span className='text-secondary shadow-lg px-5 py-2  '>teacher single</span>
+                    <span className='absolute top-[2rem] left-0 w-[10rem] bg-white h-[2rem] hidden group-hover:inline-block'>
+                        <span  onClick={() => nav('/single-teacher')} className='text-secondary shadow-lg px-5 py-2  '>teacher single</span>
                     </span>
                 </li>
                 <li className="capitalize text-md nav-link font-medium  relative flex items-center  justify-start gap-2 group">
-                    <span className='hover:text-primary duration-150 text-secondary'>events</span>
+                    <span  onClick={() => nav('/events')} className='hover:text-primary duration-150 text-secondary'>events</span>
                     <AiOutlineCaretDown className='text-xs text-secondary'/>
 
-                    <span className='absolute top-[3rem] left-0 w-[10rem] bg-white h-[2rem] hidden group-hover:inline-block'>
-                        <span className='text-secondary shadow-lg px-5 py-2  '>event single</span>
+                    <span className='absolute top-[2rem] left-0 w-[10rem] bg-white h-[2rem] hidden group-hover:inline-block'>
+                        <span  onClick={() => nav('/single-event')} className='text-secondary shadow-lg px-5 py-2  '>event single</span>
                     </span>
                 </li>
-                <li className="capitalize text-md font-medium nav-link relative inline-block hover:text-primary duration-150 text-secondary">blog</li>
-                <li className="capitalize text-md font-medium nav-link relative inline-block hover:text-primary duration-150 text-secondary">contact</li>
+
+                {/* <li className="capitalize text-md font-medium nav-link relative inline-block hover:text-primary duration-150 text-secondary">blog</li> */}
+                
+                <li  onClick={() => nav('/contact')} className="capitalize text-md font-medium nav-link relative inline-block hover:text-primary duration-150 text-secondary">contact</li>
                 
             </ul>
             <div className="flex items-center justify-start gap-5">

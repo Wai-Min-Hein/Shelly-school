@@ -1,23 +1,26 @@
 import NavBar from "../Components/NavBar";
 import { GiPhone } from "react-icons/gi";
 import SchoolHistoryBox from "../Components/SchoolHistoryBox";
+import { useNavigate } from "react-router-dom";
 
 const Contact = () => {
+
+  const nav = useNavigate()
   return (
     <div className="bg-background">
       <section className="bg-white h-[60vh] relative overflow-hidden">
         <NavBar />
-        <div className="container px-[5rem] mx-auto">
+        <div className="lg:container lg:px-[5rem] px-4 md:px-6 mt-[20vh] mx-auto">
           <div className="flex items-center justify-start gap-4  ">
-            <p className="text- capitalize text-md text-para-text-color">
+            <button onClick={() => nav('/')} className="text- capitalize text-md text-para-text-color">
               home
-            </p>
+            </button>
             <p className="">.</p>
             <p className="text- capitalize text-md text-para-text-color">
               contacts
             </p>
           </div>
-          <h1>contacts</h1>
+          <h1 className="mt-4 capitalize text-4xl font-semibold">contacts</h1>
         </div>
         <svg
           xmlns="http://www.w3.org/2000/svg"
@@ -35,7 +38,7 @@ const Contact = () => {
         </svg>
       </section>
 
-      <section className="container px-[5rem] mx-auto">
+      <section className="lg:container lg:px-[5rem] px-4 mx-auto">
         <div className="">
           <iframe
             src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d14789.002615636826!2d94.89700549585511!3d22.078242511896338!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x30b566100ef357e9%3A0xf59bffc2571aec8a!2sYin%20Mar%20Bin!5e0!3m2!1sen!2smm!4v1691332390364!5m2!1sen!2smm"
@@ -48,46 +51,50 @@ const Contact = () => {
           />
         </div>
 
-        <div className="flex items-center justify-between gap-8">
+        <div className="flex items-center justify-between gap-8 mt-12">
           <div className="basis-1/3">
-            <h2>contact us</h2>
+            <h2 className="text-2xl font-semibold  capitalize mb-6">contact us</h2>
             <div className="flex items-start gap-2">
-              <GiPhone />
+              <GiPhone className="text-2xl text-primary" />
               <div className="">
-                <h6>call us</h6>
+                <h6 className="c capitalize">call us</h6>
+                <span>+2 342 5446 67</span>
+              </div>
+            </div>
+            <div className="flex items-start gap-2 my-4">
+              <GiPhone className="text-2xl text-primary" />
+              <div className="">
+                <h6 className="c capitalize">call us</h6>
                 <span>+2 342 5446 67</span>
               </div>
             </div>
             <div className="flex items-start gap-2">
-              <GiPhone />
+              <GiPhone className="text-2xl text-primary" />
               <div className="">
-                <h6>call us</h6>
-                <span>+2 342 5446 67</span>
-              </div>
-            </div>
-            <div className="flex items-start gap-2">
-              <GiPhone />
-              <div className="">
-                <h6>call us</h6>
+                <h6 className="c capitalize">call us</h6>
                 <span>+2 342 5446 67</span>
               </div>
             </div>
           </div>
           <div className="basis-2/3">
-            <h2>talk to a human</h2>
+            <h2 className="text-2xl font-semibold  capitalize mb-6">talk to a human</h2>
             <form action="">
                 <div className="flex items-center justify-between gap-12">
-                    <input className="basis-1/2" type="text" placeholder="Your Name" />
-                    <input className="basis-1/2" type="email" placeholder="Your Email" />
+                    <input className="basis-1/2 py-2 px-4 border-2 border-secondary border-opacity-40 rounded-lg focus:outline-none" type="text" placeholder="Your Name" />
+                    <input className="basis-1/2 py-2 px-4 border-2 border-secondary border-opacity-40 rounded-lg focus:outline-none" type="email" placeholder="Your Email" />
                 </div>
-                <textarea name="" placeholder="Message" className="w-full mt-6" id="" cols="30" rows="4"></textarea>
-                <button>send a message</button>
+                <textarea name="" placeholder="Message" className="w-full mt-6 py-2 px-4 border-2 border-secondary border-opacity-40 rounded-lg focus:outline-none" id="" cols="30" rows="4"></textarea>
+                <button className="bg-secondary hover:bg-primary duration-200 px-4 py-2 rounded-md text-white capitalize mt-4">send a message</button>
             </form>
           </div>
         </div>
       </section>
 
+      <section className="lg:container lg:px-[5rem] px-4 md:px-6 mx-auto">
+
       <SchoolHistoryBox/>
+      </section>
+
     </div>
   );
 };

@@ -1,8 +1,10 @@
 import ClassesComponents from "../Components/ClassesComponents"
-import { animate, motion, useInView, useMotionValue, useTransform } from "framer-motion";
+import { animate, useInView, useMotionValue, useTransform } from "framer-motion";
 import NavBar from "../Components/NavBar";
+import SchoolHistoryBox from "../Components/SchoolHistoryBox";
 
 import { useEffect, useRef, useState } from "react";
+import { useNavigate } from "react-router-dom";
 
 const Classes = () => {
   const ref = useRef(null)
@@ -110,21 +112,24 @@ const Classes = () => {
             price: 45
         }
     ]
+
+    const nav = useNavigate()
   return (
     <div className="bg-background max-w-screen min-h-screen  overflow-hidden mb-28">
         <section className="bg-white h-[60vh] relative overflow-hidden">
         <NavBar />
-        <div className="container px-[5rem] mx-auto">
+        
+        <div className="container px-[5rem] mx-auto mt-[20vh]">
           <div className="flex items-center justify-start gap-4  ">
-            <p className="text- capitalize text-md text-para-text-color">
+            <button onClick={() => nav('/')} className="text- capitalize text-md text-para-text-color">
               home
-            </p>
+            </button>
             <p className="">.</p>
             <p className="text- capitalize text-md text-para-text-color">
-              classes
+              Classes
             </p>
           </div>
-          <h1>Classes</h1>
+          <h1 className="ca capitalize text-4xl">about us</h1>
         </div>
         <svg
           xmlns="http://www.w3.org/2000/svg"
@@ -142,7 +147,7 @@ const Classes = () => {
         </svg>
       </section>
 
-      <section className="flex items-center justify-start gap-6 flex-wrap container px-[5rem] mx-auto">
+      <section className="flex items-center justify-start gap-5 flex-wrap lg:container px-[1rem] lg:px-[5rem] mx-auto">
                    {classes?.map((singleClass) => (
                     <ClassesComponents key={singleClass?.id} singleClass={singleClass} />
                   ))}
@@ -150,46 +155,7 @@ const Classes = () => {
       </section>
 
       <section ref={ref} className="container px-[5rem] mx-auto  my-14">
-          <div className="p-10 flex items-center justify-between bg-form-gradient rounded-[3rem] text-white py-20 px-16  relative z-40">
-            <motion.span
-            style={{
-              x,
-              y,
-              transition:{
-                duration:.5,
-                
-              }
-            }}
-            className="p-4 rounded-full bg-bubble-1-gradient absolute top-0 left-0 z-10"></motion.span>
-            <motion.span 
-            style={{
-              x:-x,
-              y:-y,
-              transition:{
-                duration:.5
-              }
-            }}
-            className="p-2 rounded-full bg-bubble-1-gradient absolute bottom-0 left-0 z-10"></motion.span>
-            <div className=" text-white basis-1/4">
-              <h1 className="text-3xl font-semibold">Join us <span className="block">and stay tuned!</span> </h1>
-              <button className="bg-secondary px-4 py-2 rounded-2xl mt-4 capitalize">graduate</button>
-            </div>
-
-            <div className="">
-              <motion.span className="text-5xl  font-semibold">{rounded}</motion.span>
-              <p className="capitalize text-xl mt-2 font-normal">graduated</p>
-            </div>
-
-            <div className="">
-              <motion.span className="text-5xl  font-semibold">{rounded1}</motion.span>
-              <p className="capitalize text-xl mt-2 font-normal">teachers</p>
-            </div>
-
-            <div className="">
-              <motion.span className="text-5xl  font-semibold">{rounded2}</motion.span>
-              <p className="capitalize text-xl mt-2 font-normal">awards</p>
-            </div>
-          </div>
+          <SchoolHistoryBox/>
         </section>
     </div>
   )

@@ -48,8 +48,8 @@ const SchoolHistoryBox = () => {
       });
     }, []);
   return (
-    <section ref={ref} className="container px-[5rem] mx-auto  my-14">
-        <div className="p-10 flex items-center justify-between bg-form-gradient rounded-[3rem] text-white py-20 px-16  relative z-40">
+    <section ref={ref} className=" mx-auto  my-14">
+        <div className="p-10 block md:flex items-center justify-between bg-form-gradient rounded-[3rem] text-white py-20 px-16  relative z-40">
           <motion.span
             style={{
               x,
@@ -71,7 +71,7 @@ const SchoolHistoryBox = () => {
             className="p-2 rounded-full bg-bubble-1-gradient absolute bottom-0 left-0 z-10"
           ></motion.span>
           <div className=" text-white basis-1/4">
-            <h1 className="text-3xl font-semibold">
+            <h1 className="text-3xl font-semibold text-white">
               Join us <span className="block">and stay tuned!</span>{" "}
             </h1>
             <button className="bg-secondary px-4 py-2 rounded-2xl mt-4 capitalize">
@@ -79,25 +79,25 @@ const SchoolHistoryBox = () => {
             </button>
           </div>
 
-          <div className="">
+          <div className="hidden md:block">
             <motion.span className="text-5xl  font-semibold">
               {rounded}
             </motion.span>
-            <p className="capitalize text-xl mt-2 font-normal">graduated</p>
+            <p className="capitalize text-xl mt-2 font-normal text-white">graduated</p>
           </div>
 
-          <div className="">
+          <div className="hidden md:block">
             <motion.span className="text-5xl  font-semibold">
               {rounded1}
             </motion.span>
-            <p className="capitalize text-xl mt-2 font-normal">teachers</p>
+            <p className="capitalize text-xl mt-2 font-normal text-white">teachers</p>
           </div>
 
-          <div className="">
+          <div className="hidden md:block">
             <motion.span className="text-5xl  font-semibold">
               {rounded2}
             </motion.span>
-            <p className="capitalize text-xl mt-2 font-normal">awards</p>
+            <p className="capitalize text-xl mt-2 font-normal text-white">awards</p>
           </div>
         </div>
       </section>

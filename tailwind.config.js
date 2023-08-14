@@ -26,6 +26,8 @@ export default {
         'primary': '#f37335',
         'yellow': '#fda12c',
         'blue': '#C9E2F8',
+        'violent': '#8561CE',
+        
         'secondary': '#135e9e',
         'header-text-color': '#494949',
         'para-text-color': '#54595F',

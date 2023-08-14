@@ -12,6 +12,14 @@
 html{
   font-family: 'Poppins', sans-serif;
 }
+
+h1,h2,h3,h4,h5,h6{
+  color: #494949;
+  font-weight: 600;
+}
+p{
+  color: #54595F;
+}
 .nav-link::before{
   content:'';
   position: absolute;
@@ -43,6 +51,10 @@ html{
   width: 60%;
 }
 
+.swiper{
+  padding: 1rem 0;
+}
+
 .swiper-pagination{
   position: relative!important ;
 }
@@ -54,6 +66,7 @@ height: 5px;
 border-radius: 2px !important;
 
 }
+
 
 
 /* npx tailwindcss -i ./src/App.css -o ./Css/output.css --watch */

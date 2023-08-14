@@ -1,15 +1,15 @@
-
 import NavBar from "../Components/NavBar";
 
 import { RiShareFill } from "react-icons/ri";
+import { AiOutlineTwitter } from "react-icons/ai";
+import { FaFacebookF, FaLinkedinIn, FaShareAlt } from "react-icons/fa";
 
 import SingleTeacherFlex from "../Components/SingleTeacherFlex";
 import SchoolHistoryBox from "../Components/SchoolHistoryBox";
 
 const SingleTeacher = () => {
- 
   // const teachers = [
-    
+
   //   {
   //     id: "1",
   //     name: "Polina Kerston",
@@ -103,83 +103,97 @@ const SingleTeacher = () => {
         </svg>
       </section>
 
-      <section className=" container px-[5rem] mx-auto">
+      <section className=" lg:container lg:px-[5rem] px-[1rem] md:px-[2rem] mx-auto">
         <SingleTeacherFlex />
       </section>
 
-      <section className="container px-[5rem] mx-auto">
-        <h1>Other Teachers</h1>
+      <section className="lg:container lg:px-[5rem] px-[1rem] md:px-[2rem] mx-auto">
+        <h1 className="text-3xl pb-4">Other Teachers</h1>
 
-        <div className="flex items-center justify-between">
-          <div className="basis-[23%]">
-            <div className="rounded-3xl overflow-hidden relative">
+        <div className="flex items-center justify-between flex-wrap  gap-y-6 ">
+          <div className="lg:basis-[23%] basis-[48%]">
+            <div className="relative overflow-hidden rounded-2xl">
               <img
-                className="block w-full object-cover"
                 src="https://shelly.merku.love/wp-content/uploads/2020/11/img5-270x405.png"
+                className="w-full rounded-2xl hover:scale-110 duration-500"
                 alt=""
               />
-              <span className="absolute bottom-6 right-4 bg-primary w-10 h-10 grid place-items-center rounded-full">
-                <RiShareFill className=" text-white text-xl " />
-              </span>
+              <div className="p-4 rounded-full cursor-pointer grid place-items-center bg-btn-gradient absolute mx-6 mb-4 bottom-0 right-0 group">
+                <FaFacebookF className="text-white group-hover:block hidden" />
+                <FaLinkedinIn className="text-white group-hover:block hidden my-4" />
+                <AiOutlineTwitter className="text-white group-hover:block hidden mb-4" />
+                <FaShareAlt className="text-white" />
+              </div>
             </div>
             <div className="text-center">
-              <h1>Polina Kerston</h1>
-              <p>English Teacher</p>
+              <h6 className="text-xl mt-6">Polina Kerston</h6>
+              <p className="text-secondary">English Teacher</p>
             </div>
           </div>
-          <div className="basis-[23%]">
-            <div className="rounded-3xl overflow-hidden relative">
+
+          <div className="lg:basis-[23%] basis-[48%]">
+            <div className="relative overflow-hidden rounded-2xl">
               <img
-                className="block w-full object-cover"
                 src="https://shelly.merku.love/wp-content/uploads/2020/11/img5-270x405.png"
+                className="w-full rounded-2xl hover:scale-110 duration-500"
                 alt=""
               />
-              <span className="absolute bottom-6 right-4 bg-primary w-10 h-10 grid place-items-center rounded-full">
-                <RiShareFill className=" text-white text-xl " />
-              </span>
+              <div className="p-4 rounded-full cursor-pointer grid place-items-center bg-btn-gradient absolute mx-6 mb-4 bottom-0 right-0 group">
+                <FaFacebookF className="text-white group-hover:block hidden" />
+                <FaLinkedinIn className="text-white group-hover:block hidden my-4" />
+                <AiOutlineTwitter className="text-white group-hover:block hidden mb-4" />
+                <FaShareAlt className="text-white" />
+              </div>
             </div>
             <div className="text-center">
-              <h1>Polina Kerston</h1>
-              <p>English Teacher</p>
+              <h6 className="text-xl mt-6">Polina Kerston</h6>
+              <p className="text-secondary">English Teacher</p>
             </div>
           </div>
-          <div className="basis-[23%]">
-            <div className="rounded-3xl overflow-hidden relative">
+          <div className="lg:basis-[23%] basis-[48%]">
+            <div className="relative overflow-hidden rounded-2xl">
               <img
-                className="block w-full object-cover"
                 src="https://shelly.merku.love/wp-content/uploads/2020/11/img5-270x405.png"
+                className="w-full rounded-2xl hover:scale-110 duration-500"
                 alt=""
               />
-              <span className="absolute bottom-6 right-4 bg-primary w-10 h-10 grid place-items-center rounded-full">
-                <RiShareFill className=" text-white text-xl " />
-              </span>
+              <div className="p-4 rounded-full cursor-pointer grid place-items-center bg-btn-gradient absolute mx-6 mb-4 bottom-0 right-0 group">
+                <FaFacebookF className="text-white group-hover:block hidden" />
+                <FaLinkedinIn className="text-white group-hover:block hidden my-4" />
+                <AiOutlineTwitter className="text-white group-hover:block hidden mb-4" />
+                <FaShareAlt className="text-white" />
+              </div>
             </div>
             <div className="text-center">
-              <h1>Polina Kerston</h1>
-              <p>English Teacher</p>
+              <h6 className="text-xl mt-6">Polina Kerston</h6>
+              <p className="text-secondary">English Teacher</p>
             </div>
           </div>
-          <div className="basis-[23%]">
-            <div className="rounded-3xl overflow-hidden relative">
+          <div className="lg:basis-[23%] basis-[48%]">
+            <div className="relative overflow-hidden rounded-2xl">
               <img
-                className="block w-full object-cover"
                 src="https://shelly.merku.love/wp-content/uploads/2020/11/img5-270x405.png"
+                className="w-full rounded-2xl hover:scale-110 duration-500"
                 alt=""
               />
-              <span className="absolute bottom-6 right-4 bg-primary w-10 h-10 grid place-items-center rounded-full">
-                <RiShareFill className=" text-white text-xl " />
-              </span>
+              <div className="p-4 rounded-full cursor-pointer grid place-items-center bg-btn-gradient absolute mx-6 mb-4 bottom-0 right-0 group">
+                <FaFacebookF className="text-white group-hover:block hidden" />
+                <FaLinkedinIn className="text-white group-hover:block hidden my-4" />
+                <AiOutlineTwitter className="text-white group-hover:block hidden mb-4" />
+                <FaShareAlt className="text-white" />
+              </div>
             </div>
             <div className="text-center">
-              <h1>Polina Kerston</h1>
-              <p>English Teacher</p>
+              <h6 className="text-xl mt-6">Polina Kerston</h6>
+              <p className="text-secondary">English Teacher</p>
             </div>
           </div>
         </div>
       </section>
 
-      
-      <SchoolHistoryBox/>
+      <section className="lg:container lg:px-[5rem] px-[1rem] mx-auto">
+        <SchoolHistoryBox />
+      </section>
     </div>
   );
 };

@@ -38,85 +38,92 @@ const Event = () => {
         </svg>
       </section>
 
-      <section className="container px-[5rem] mx-auto py-16">
-        <div className="bg-white flex items-start justify-start gap-6 p-10 rounded-md">
-          <div className="basis-1/3 rounded-lg overflow-hidden">
+      <section className="lg:container lg:px-[5rem] px-[1rem] sm:px-[2rem] mx-auto py-16">
+        <div className="bg-white md:flex  items-start justify-start gap-6 p-10 rounded-md shadow-md shadow-[rgba(19,93,158,0.5)] ">
+          <div className="md:basis-1/3 rounded-lg overflow-hidden">
             <img
               src="https://shelly.merku.love/wp-content/uploads/2020/11/blog-large5-1-300x200.png"
               alt=""
+              className="block object-cover w-full"
             />
           </div>
-          <div className="basis-2/3 flex-1 flex items-start justify-between">
-            <div className="flex-1">
-              <div className="flex justify-start gap-6">
-                <div className="flex gap-2 items-center">
-                  <div className="w-10 h-10 rounded-full grid place-items-center bg-blue">
-                    <FaRegCalendar className=" text-sm" />
+          <div className="basis-2/3 ">
+            <div className="flex-1 sm:flex  items-center sm:items-start sm:justify-between">
+              <div className="flex-1">
+                <div className="sm:flex justify-start gap-6 ">
+                  <div className="flex gap-2 items-center jc justify-center">
+                    <div className="w-10 h-10 rounded-full grid place-items-center bg-blue">
+                      <FaRegCalendar className=" text-sm text-secondary" />
+                    </div>
+                    <span className="text-secondary font-medium">
+                      2022-12-30
+                    </span>
                   </div>
-                  <span>2022-12-30</span>
-                </div>
 
-                <div className="flex gap-2 items-center">
-                  <div className="w-10 h-10 rounded-full grid place-items-center bg-blue">
-                    <BiSolidTimeFive className=" text-sm" />
+                  <div className="flex gap-2 items-center justify-center">
+                    <div className="w-10 h-10 rounded-full grid place-items-center bg-blue">
+                      <BiSolidTimeFive className=" text-sm text-secondary" />
+                    </div>
+                    <span className="text-secondary font-medium">12:00</span>
                   </div>
-                  <span>12:00</span>
                 </div>
               </div>
 
-              <h1>Explore Watercolor Illustration</h1>
-
-              <div className="flex items-center justify-start gap-2">
-                <GrLocation />
-                <p>25 Grafton St, Worcester</p>
+              <div className="text-center">
+                <span className="text-primary text-xl font-medium">$ 8</span>
               </div>
             </div>
 
             <div className="">
-              <span className="text-primary text-xl">$ 8</span>
+              <h1 className="text-lg hover:text-primary duration-150 cursor-pointer py-6 font-semibold">Explore Watercolor Illustration</h1>
+              <div className="flex items-center justify-start gap-4">
+                <GrLocation className="text-primary" />
+                <p>25 Grafton St, Worcester</p>
+              </div>
             </div>
           </div>
         </div>
 
-        <div className="bg-white flex items-start justify-start gap-6 p-10 rounded-md my-12">
-          <div className="basis-2/3 flex-1 flex items-start justify-between">
-            <div className="flex-1">
-              <div className="flex justify-start gap-6">
-                <div className="flex gap-2 items-center">
-                  <div className="w-10 h-10 rounded-full grid place-items-center bg-blue">
-                    <FaRegCalendar className=" text-sm" />
+        <div className="bg-white flex items-start justify-start gap-6 p-10 rounded-md my-12 shadow-md shadow-[rgba(19,93,158,0.5)] ">
+        <div className="w-full ">
+            <div className="flex-1 sm:flex  items-center sm:items-start sm:justify-between">
+              <div className="flex-1">
+                <div className="sm:flex justify-start gap-6 ">
+                  <div className="flex gap-2 items-center jc justify-center">
+                    <div className="w-10 h-10 rounded-full grid place-items-center bg-blue">
+                      <FaRegCalendar className=" text-sm text-secondary" />
+                    </div>
+                    <span className="text-secondary font-medium">
+                      2022-12-30
+                    </span>
                   </div>
-                  <span>2022-12-30</span>
-                </div>
 
-                <div className="flex gap-2 items-center">
-                  <div className="w-10 h-10 rounded-full grid place-items-center bg-blue">
-                    <BiSolidTimeFive className=" text-sm" />
+                  <div className="flex gap-2 items-center justify-center">
+                    <div className="w-10 h-10 rounded-full grid place-items-center bg-blue">
+                      <BiSolidTimeFive className=" text-sm text-secondary" />
+                    </div>
+                    <span className="text-secondary font-medium">12:00</span>
                   </div>
-                  <span>12:00</span>
                 </div>
               </div>
 
-              <h1>Explore Watercolor Illustration</h1>
-
-              <div className="flex items-center justify-start gap-2">
-                <GrLocation />
-                <p>25 Grafton St, Worcester</p>
+              <div className="text-center">
+                <span className="text-primary text-xl font-medium">$ 8</span>
               </div>
             </div>
 
             <div className="">
-              <span className="text-primary text-xl">$ 8</span>
+              <h1 className="text-lg hover:text-primary duration-150 cursor-pointer py-6 font-semibold">Explore Watercolor Illustration</h1>
+              <div className="flex items-center justify-start gap-4">
+                <GrLocation className="text-primary" />
+                <p>25 Grafton St, Worcester</p>
+              </div>
             </div>
           </div>
         </div>
       </section>
 
       <SchoolHistoryBox />
-
-      
-
-
     </div>
   );
 };

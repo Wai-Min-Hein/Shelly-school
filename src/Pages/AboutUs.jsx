@@ -4,8 +4,13 @@ import { BsFillPenFill } from "react-icons/bs";
 
 import { useEffect, useRef, useState } from "react";
 import teacher from "../../Images/teacher.svg";
+import { useNavigate } from "react-router-dom";
+import BtnComponent from "../Components/BtnComponent";
+import SchoolHistoryBox from "../Components/SchoolHistoryBox";
 
 const AboutUs = () => {
+
+  const nav = useNavigate()
 
   const ref = useRef(null)
 
@@ -66,17 +71,17 @@ const AboutUs = () => {
     <div ref={aboutRef} className="bg-background max-w-screen min-h-screen  overflow-hidden mb-28">
       <section className="bg-white h-[60vh] relative overflow-hidden">
         <NavBar />
-        <div className="container px-[5rem] mx-auto">
+        <div className="container px-[5rem] mx-auto mt-[20vh]">
           <div className="flex items-center justify-start gap-4  ">
-            <p className="text- capitalize text-md text-para-text-color">
+            <button onClick={() => nav('/')} className="text- capitalize text-md text-para-text-color">
               home
-            </p>
+            </button>
             <p className="">.</p>
             <p className="text- capitalize text-md text-para-text-color">
               about
             </p>
           </div>
-          <h1>about us</h1>
+          <h1 className="ca capitalize text-4xl">about us</h1>
         </div>
         <svg
           xmlns="http://www.w3.org/2000/svg"
@@ -94,16 +99,13 @@ const AboutUs = () => {
         </svg>
       </section>
 
-      <section className=" container px-[5rem] mx-auto">
-        <div className="flex items-center justify-between gap-12">
-          <div className="basis-1/2">
-            <div className="">
-              <h1>welcome to</h1>
-              <h1>school</h1>
-            </div>
-            <p>
-              Morbi vel augue et metus pellentesque lacinia eu non odio. Sed id
-              purus urna. Maecenas ultrices ligula a nisi dictum tristique.
+      <section className=" lg:container xl:px-[5rem] px-[1rem] mx-auto">
+        <div className="block lg:flex items-center justify-between gap-12">
+          <div className="basis-1/3">
+              <h1 className="text-4xl">Welcome to <span className="text-primary block">shelly school</span></h1>
+              
+            <p className=" w-full my-8">
+            Morbi vel augue et metus pellentesque lacinia eu non odio. Sed id purus urna. Maecenas ultrices ligula a nisi dictum tristique. 
             </p>
 
             <div className="">
@@ -119,9 +121,9 @@ const AboutUs = () => {
                   transition={{
                     duration: 1,
                   }}
-                  className="bg-green-500 w-0 h-full absolute z-10 top-0 left-0"
+                  className="bg-violent w-0 h-full absolute z-10 top-0 left-0"
                 ></motion.div>
-                <span className="z-20 relative">creative skill</span>
+                <span className="z-20 relative capitalize text-white">creative skill</span>
               </div>
             </div>
             <div className="mt-8">
@@ -139,15 +141,15 @@ const AboutUs = () => {
                   }}
                   className="bg-green-500 w-0 h-full absolute z-10 top-0 left-0"
                 ></motion.div>
-                <span className="z-20 relative">creative skill</span>
+                <span className="z-20 relative capitalize text-white">Exact sciences</span>
               </div>
             </div>
           </div>
-          <div className="basis-1/2">
-            <div className="relative">
+          <div className="basis-1/2 hidden md:block">
+            <div className="relative  mt-16 lg:mt-10 w-[30rem] mx-auto">
               <img
                 src="https://shelly.merku.love/wp-content/uploads/2021/06/gallery-15.jpg"
-                className="block w-[30rem] h-[30rem] object-cover  rounded-full"
+                className="block  h-[30rem]  object-cover  rounded-full"
                 alt=""
               />
 
@@ -170,36 +172,36 @@ const AboutUs = () => {
           </div>
         </div>
 
-        <div className="flex items-center justify-between gap-12 mt-24">
+        <div className="flex flex-col-reverse lg:flex-row items-center justify-between gap-12 mt-24">
           <div className="basis-1/2">
             <div className="">
               <img
                 src="https://shelly.merku.love/wp-content/uploads/2020/11/abt2.png"
-                className="w-[30rem] h-[30rem] object-cover rounded-full"
+                className="w-[28rem] h-[28rem] object-cover rounded-full"
                 alt=""
               />
             </div>
           </div>
 
           <div className="basis-1/2">
-            <h1>our mission</h1>
-            <p>
+            <h1 className="text-3xl capitalize">our mission</h1>
+            <p className="my-6">
               Praesent rhoncus justo erat, sed sollicitudin arcu malesuada vel.
               Etiam scelerisque justo ut purus luctus ullamcorper. Vivamus vitae
               elit ligula. Fusce eu rutrum nisl.
             </p>
             <div className="">
               <div className="flex items-center justify-start gap-4">
-                <BsFillPenFill />
-                <span>Etiam ante nisl, maximus vitae sem non, dignissim</span>
+                <BsFillPenFill className="text-primary" />
+                <span className="text-para-text-color">Etiam ante nisl, maximus vitae sem non, dignissim</span>
               </div>
               <div className="flex items-center justify-start gap-4">
-                <BsFillPenFill />
-                <span>Etiam ante nisl, maximus vitae sem non, dignissim</span>
+                <BsFillPenFill className="text-primary" />
+                <span className="text-para-text-color">Etiam ante nisl, maximus vitae sem non, dignissim</span>
               </div>
               <div className="flex items-center justify-start gap-4">
-                <BsFillPenFill />
-                <span>Etiam ante nisl, maximus vitae sem non, dignissim</span>
+                <BsFillPenFill className="text-primary" />
+                <span className="text-para-text-color">Etiam ante nisl, maximus vitae sem non, dignissim</span>
               </div>
             </div>
           </div>
@@ -208,20 +210,20 @@ const AboutUs = () => {
         <div className="flex items-center justify-between gap-12">
           <div className="basis-1/3">
             <div className="">
-              <h1>Benefits of</h1>
-              <h1>Shelly School</h1>
+              <h1 className="text-3xl">Benefits of <span className="text-primary block">Shelly School</span></h1>
             </div>
-            <p>
+            <p className="w-4/5 my-6">
               Morbi vel augue et metus pellentesque lacinia eu non odio. Sed id
               purus urna. Maecenas ultrices ligula a nisi dictum tristique.
               Suspendisse potenti. Curabitur egestas ultrices sem, eu vestibulum
               leo sagittis et.
             </p>
-            <button>contact us</button>
+            <BtnComponent text={'Contact us'} />
           </div>
+
           <div className="basis-2/3 flex items-center justify-between gap-4 flex-wrap">
             <div className="basis-[48.5%]">
-              <div className=" bg-white rounded-2xl shadow-lg grid place-items-center py-12">
+              <div className=" bg-white rounded-2xl shadow-lg  py-12 px-10">
                 <div className="relative after:content-[''] after:absolute after:w-[3rem] after:h-[3rem] after:bg-yellow after:top-0 after:left-[.5rem] after:z-10  after:rounded-full">
                   <img
                     className="w-[3rem] z-50 relative"
@@ -230,14 +232,17 @@ const AboutUs = () => {
                   />
                 </div>
                 <h6>Experienced Teachers</h6>
-                <p>
+                <p className="w-4/5 my-6">
                   Morbi vel augue et metus pellentesque lacinia eu non odio.
                 </p>
-                <button>read more</button>
+                <div className="justify-self-start">
+
+                <BtnComponent text={'Read more'} />
+                </div>
               </div>
             </div>
             <div className="basis-[48.5%] translate-y-5">
-              <div className=" bg-white rounded-2xl shadow-lg grid place-items-center py-12">
+            <div className=" bg-white rounded-2xl shadow-lg  py-12 px-10">
                 <div className="relative after:content-[''] after:absolute after:w-[3rem] after:h-[3rem] after:bg-yellow after:top-0 after:left-[.5rem] after:z-10  after:rounded-full">
                   <img
                     className="w-[3rem] z-50 relative"
@@ -246,14 +251,17 @@ const AboutUs = () => {
                   />
                 </div>
                 <h6>Experienced Teachers</h6>
-                <p>
+                <p className="w-4/5 my-6">
                   Morbi vel augue et metus pellentesque lacinia eu non odio.
                 </p>
-                <button>read more</button>
+                <div className="justify-self-start">
+
+                <BtnComponent text={'Read more'} />
+                </div>
               </div>
             </div>
             <div className="basis-[48.5%]">
-              <div className=" bg-white rounded-2xl shadow-lg grid place-items-center py-12">
+            <div className=" bg-white rounded-2xl shadow-lg  py-12 px-10">
                 <div className="relative after:content-[''] after:absolute after:w-[3rem] after:h-[3rem] after:bg-yellow after:top-0 after:left-[.5rem] after:z-10  after:rounded-full">
                   <img
                     className="w-[3rem] z-50 relative"
@@ -262,14 +270,17 @@ const AboutUs = () => {
                   />
                 </div>
                 <h6>Experienced Teachers</h6>
-                <p>
+                <p className="w-4/5 my-6">
                   Morbi vel augue et metus pellentesque lacinia eu non odio.
                 </p>
-                <button>read more</button>
+                <div className="justify-self-start">
+
+                <BtnComponent text={'Read more'} />
+                </div>
               </div>
             </div>
             <div className="basis-[48.5%]  translate-y-5">
-              <div className=" bg-white rounded-2xl shadow-lg grid place-items-center py-12">
+            <div className=" bg-white rounded-2xl shadow-lg  py-12 px-10">
                 <div className="relative after:content-[''] after:absolute after:w-[3rem] after:h-[3rem] after:bg-yellow after:top-0 after:left-[.5rem] after:z-10  after:rounded-full">
                   <img
                     className="w-[3rem] z-50 relative"
@@ -278,56 +289,20 @@ const AboutUs = () => {
                   />
                 </div>
                 <h6>Experienced Teachers</h6>
-                <p>
+                <p className="w-4/5 my-6">
                   Morbi vel augue et metus pellentesque lacinia eu non odio.
                 </p>
-                <button>read more</button>
+                <div className="justify-self-start">
+
+                <BtnComponent text={'Read more'} />
+                </div>
               </div>
             </div>
           </div>
         </div>
 
         <div ref={ref} className="  my-14">
-          <div className="p-10 flex items-center justify-between bg-form-gradient rounded-[3rem] text-white py-20 px-16  relative z-40">
-            <motion.span
-            style={{
-              x,
-              y,
-              transition:{
-                duration:.5,
-                
-              }
-            }}
-            className="p-4 rounded-full bg-bubble-1-gradient absolute top-0 left-0 z-10"></motion.span>
-            <motion.span 
-            style={{
-              x:-x,
-              y:-y,
-              transition:{
-                duration:.5
-              }
-            }}
-            className="p-2 rounded-full bg-bubble-1-gradient absolute bottom-0 left-0 z-10"></motion.span>
-            <div className=" text-white basis-1/4">
-              <h1 className="text-3xl font-semibold">Join us <span className="block">and stay tuned!</span> </h1>
-              <button className="bg-secondary px-4 py-2 rounded-2xl mt-4 capitalize">graduate</button>
-            </div>
-
-            <div className="">
-              <motion.span className="text-5xl  font-semibold">{rounded}</motion.span>
-              <p className="capitalize text-xl mt-2 font-normal">graduated</p>
-            </div>
-
-            <div className="">
-              <motion.span className="text-5xl  font-semibold">{rounded1}</motion.span>
-              <p className="capitalize text-xl mt-2 font-normal">teachers</p>
-            </div>
-
-            <div className="">
-              <motion.span className="text-5xl  font-semibold">{rounded2}</motion.span>
-              <p className="capitalize text-xl mt-2 font-normal">awards</p>
-            </div>
-          </div>
+         <SchoolHistoryBox/>
         </div>
       </section>
     </div>

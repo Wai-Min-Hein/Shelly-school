@@ -182,7 +182,7 @@ const App = () => {
         </motion.div>
       </div>
       <Routes>
-        <Route path="/home" element={<Home />} />
+        <Route path="/" element={<Home />} />
         <Route path="/classes" element={<Classes />} />
         <Route path="/single-class" element={<SingleClass />} />
         <Route path="/about-us" element={<AboutUs />} />
@@ -191,7 +191,7 @@ const App = () => {
 
         <Route path="/events" element={<Event />} />
         <Route path="/single-event" element={<SingleEvent />} />
-        <Route path="/" element={<Contact />} />
+        <Route path="/contact" element={<Contact />} />
 
       </Routes>
       <Footer />

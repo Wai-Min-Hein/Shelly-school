@@ -3,6 +3,7 @@ import NavBar from "../Components/NavBar";
 
 import { useEffect, useRef, useState } from "react";
 import TeacherComponent from "../Components/TeacherComponent";
+import SchoolHistoryBox from "../Components/SchoolHistoryBox";
 
 
 const Teachers = () => {
@@ -148,46 +149,7 @@ const Teachers = () => {
       </section>
 
       <section ref={ref} className="container px-[5rem] mx-auto  my-14">
-          <div className="p-10 flex items-center justify-between bg-form-gradient rounded-[3rem] text-white py-20 px-16  relative z-40">
-            <motion.span
-            style={{
-              x,
-              y,
-              transition:{
-                duration:.5,
-                
-              }
-            }}
-            className="p-4 rounded-full bg-bubble-1-gradient absolute top-0 left-0 z-10"></motion.span>
-            <motion.span 
-            style={{
-              x:-x,
-              y:-y,
-              transition:{
-                duration:.5
-              }
-            }}
-            className="p-2 rounded-full bg-bubble-1-gradient absolute bottom-0 left-0 z-10"></motion.span>
-            <div className=" text-white basis-1/4">
-              <h1 className="text-3xl font-semibold">Join us <span className="block">and stay tuned!</span> </h1>
-              <button className="bg-secondary px-4 py-2 rounded-2xl mt-4 capitalize">graduate</button>
-            </div>
-
-            <div className="">
-              <motion.span className="text-5xl  font-semibold">{rounded}</motion.span>
-              <p className="capitalize text-xl mt-2 font-normal">graduated</p>
-            </div>
-
-            <div className="">
-              <motion.span className="text-5xl  font-semibold">{rounded1}</motion.span>
-              <p className="capitalize text-xl mt-2 font-normal">teachers</p>
-            </div>
-
-            <div className="">
-              <motion.span className="text-5xl  font-semibold">{rounded2}</motion.span>
-              <p className="capitalize text-xl mt-2 font-normal">awards</p>
-            </div>
-          </div>
+         <SchoolHistoryBox/>
         </section>
     </div>
   )

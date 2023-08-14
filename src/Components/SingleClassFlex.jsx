@@ -11,11 +11,12 @@ import "swiper/css";
 import "swiper/css/navigation";
 import "swiper/css/pagination";
 import "swiper/css/scrollbar";
+import BtnComponent from "./BtnComponent";
 
 const SingleClassFlex = () => {
   return (
-    <div className="flex items-start justify-start gap-4">
-      <div className="basis-2/3 bg-white rounded-md px-4 py-2">
+    <div className="flex flex-col lg:flex-row items-start justify-start gap-4 shadow-lg pb-2 single-class">
+      <div className="basis-2/3 bg-white rounded-xl px-12 py-8">
         <p>
           Lorem ipsum dolor sit amet, consectetur adipiscing elit. Fusce vel
           venenatis felis. Fusce id lectus sit amet nisi ornare ultricies. In
@@ -23,7 +24,10 @@ const SingleClassFlex = () => {
           sollicitudin sit amet imperdiet in, scelerisque sit amet arcu. In
           vehicula sem eget nisi convallis, a mattis orci imperdiet. Curabitur
           vitae sapien vel lectus sagittis consequat. Nullam enim velit,
-          dignissim vel viverra ac, eleifend ut tellus. Nunc at tincidunt nisl.
+          dignissim vel viverra ac, eleifend ut tellus.
+        </p>
+        <p className="my-4">
+        Nunc at tincidunt nisl.
           Nullam fringilla quis odio vitae eleifend. Quisque sed mi erat. In hac
           habitasse platea dictumst. Vivamus mattis nunc quis turpis pretium
           sollicitudin. In eu semper justo. Phasellus facilisis hendrerit massa,
@@ -33,6 +37,7 @@ const SingleClassFlex = () => {
         </p>
         <div className="">
           <img
+          className="rounded-2xl"
             src="https://shelly.merku.love/wp-content/uploads/2020/11/blog-large8.png"
             alt=""
           />
@@ -59,13 +64,16 @@ const SingleClassFlex = () => {
             />
           </div>
         </div>
-        <p>
+        <p className="my-6">
           Donec luctus hendrerit sagittis. Cras pellentesque convallis tempus.
           Praesent finibus lacus at urna fringilla, fermentum sodales enim
           sodales. Sed vel eros a mi egestas consectetur. Donec eleifend ornare
           mauris, in tincidunt ex laoreet et. Donec eu arcu euismod,
           pellentesque arcu eu, condimentum nibh. Sed blandit id mauris sed
-          suscipit. Nam aliquet euismod metus in hendrerit. Quisque finibus
+          suscipit.
+        </p>
+        <p>
+        Nam aliquet euismod metus in hendrerit. Quisque finibus
           facilisis velit, eget posuere nulla suscipit ut. Vivamus non quam
           massa. Nulla facilisi. Mauris vitae viverra leo. Praesent nec risus
           non dui iaculis vehicula at id ante. Morbi hendrerit leo libero, in
@@ -73,11 +81,14 @@ const SingleClassFlex = () => {
           euismod at.
         </p>
         <div className="">
-          <h1>Education Programs</h1>
+          <h1 className="my-6">Education Programs</h1>
           <p>
             Aliquam dui tellus, sollicitudin eget malesuada at, blandit id
             magna. Integer non mauris urna. Curabitur placerat metus in pulvinar
-            imperdiet. Vivamus bibendum eu tellus quis consectetur. Aliquam
+            imperdiet. 
+          </p>
+          <p className="my-6">
+          Vivamus bibendum eu tellus quis consectetur. Aliquam
             tincidunt dui augue, at porttitor quam semper et. Vestibulum aliquam
             leo sed ultricies ullamcorper. Aliquam eu rutrum est, quis faucibus
             ligula. Nulla dignissim odio lorem, id imperdiet sem dignissim eget.
@@ -90,69 +101,69 @@ const SingleClassFlex = () => {
           <h1>Activities Involved</h1>
           <div className="">
             <div className="flex items-center justify-start gap-2">
-              <BsFillPenFill />
+              <BsFillPenFill className="text-primary" />
               <span>Sensory Time</span>
             </div>
             <div className="flex items-center justify-start gap-2">
-              <BsFillPenFill />
+              <BsFillPenFill className="text-primary" />
               <span>Sensory Time</span>
             </div>
             <div className="flex items-center justify-start gap-2">
-              <BsFillPenFill />
+              <BsFillPenFill className="text-primary" />
               <span>Sensory Time</span>
             </div>
             <div className="flex items-center justify-start gap-2">
-              <BsFillPenFill />
+              <BsFillPenFill className="text-primary" />
               <span>Sensory Time</span>
             </div>
             <div className="flex items-center justify-start gap-2">
-              <BsFillPenFill />
+              <BsFillPenFill className="text-primary" />
               <span>Sensory Time</span>
             </div>
             <div className="flex items-center justify-start gap-2">
-              <BsFillPenFill />
+              <BsFillPenFill className="text-primary" />
               <span>Sensory Time</span>
             </div>
           </div>
         </div>
       </div>
-      <div className="basis-1/3 sticky top-0 overflow-hidden">
-        <div className="border-b border-secondary pb-4">
-          <span className="w-8 h-[3px] rounded-md bg-primary inline-block"></span>
-          <h1>About classes</h1>
+      <div className="basis-1/3 sticky top-0 overflow-hidden group px-4">
+        <div className="border-b-2 border-secondary border-opacity-40 pb-4 ">
+          <span className="w-8 h-[3px] group-hover:w-12 duration-200 rounded-md bg-primary inline-block"></span>
+          <h1 className="my-4">About classes</h1>
           <div className="">
             <div className="flex items-center justify-between">
               <div className="flex items-center justify-start gap-2">
-                <FaRegCalendar />
-                <span>Mon - Fri</span>
+                <FaRegCalendar className="text-secondary" />
+                <span className="text-[1.1rem] font-semibold text-header-text-color">Mon - Fri</span>
               </div>
-              <p>10 AM - 12 AM</p>
+              <p className="text-secondary font-semibold text-[1.1rem]">10 AM - 12 AM</p>
             </div>
             <div className="flex items-center justify-between">
               <div className="flex items-center justify-start gap-2">
-                <FaRegCalendar />
-                <span>Mon - Fri</span>
+                <FaRegCalendar className="text-secondary" />
+                <span className="text-[1.1rem] font-semibold text-header-text-color">Mon - Fri</span>
               </div>
-              <p>10 AM - 12 AM</p>
+              <p className="text-secondary font-semibold text-[1.1rem]">10 AM - 12 AM</p>
             </div>
             <div className="flex items-center justify-between">
               <div className="flex items-center justify-start gap-2">
-                <FaRegCalendar />
-                <span>Mon - Fri</span>
+                <FaRegCalendar className="text-secondary" />
+                <span className="text-[1.1rem] font-semibold text-header-text-color">Mon - Fri</span>
               </div>
-              <p>10 AM - 12 AM</p>
+              <p className="text-secondary font-semibold text-[1.1rem]">10 AM - 12 AM</p>
             </div>
             <div className="flex items-center justify-between">
               <div className="flex items-center justify-start gap-2">
-                <FaRegCalendar />
-                <span>Mon - Fri</span>
+                <FaRegCalendar className="text-secondary" />
+                <span className="text-[1.1rem] font-semibold text-header-text-color">Mon - Fri</span>
               </div>
-              <p>10 AM - 12 AM</p>
+              <p className="text-secondary font-semibold text-[1.1rem]">10 AM - 12 AM</p>
             </div>
           </div>
         </div>
 
-        <div className="flex items-center justify-between gap-6">
+        <div className="flex items-center justify-between gap-6 mt-8">
           <div className="flex items-center justify-start gap-2">
             <img
               src="https://shelly.merku.love/wp-content/uploads/2020/11/teacher7-150x150.png"
@@ -161,8 +172,11 @@ const SingleClassFlex = () => {
             />
             <span>Vincent Luggers</span>
           </div>
-          <button>enroll now</button>
-        </div>
+          <BtnComponent text={'Enroll'}/>
+        </div >
+
+        <div className="lg:h-[40rem] h-[20rem] w-full overflow-hidden">
+
 
           <Swiper
             modules={[Navigation, Pagination, Scrollbar, A11y,Autoplay]}
@@ -180,11 +194,11 @@ const SingleClassFlex = () => {
           >
             <SwiperSlide>
 
-                <div className="">
+                <div className="rounded-2xl overflow-hidden">
                     <div className="border-b-4 border-b-primary">
                         <img src="https://shelly.merku.love/wp-content/uploads/2020/11/class8.png" className="w-full h-full object-cover" alt="" />
                     </div>
-                    <h6>Natural Sciences & Mathematics Courses</h6>
+                    <h6 className="hover:text-primary duration-200 my-4 text-secondary font-semibold text-xl">Natural Sciences & Mathematics Courses</h6>
                 </div>
 
 
@@ -192,50 +206,52 @@ const SingleClassFlex = () => {
 
             <SwiperSlide>
 
-                <div className="">
+                <div className="rounded-2xl overflow-hidden">
                     <div className="border-b-4 border-b-primary">
                         <img src="https://shelly.merku.love/wp-content/uploads/2020/11/class8.png" className="w-full h-full object-cover" alt="" />
                     </div>
-                    <h6>Natural Sciences & Mathematics Courses</h6>
+                    <h6 className="hover:text-primary duration-200 my-4 text-secondary font-semibold text-xl">Natural Sciences & Mathematics Courses</h6>
                 </div>
 
 
             </SwiperSlide>
             <SwiperSlide>
 
-                <div className="">
+                <div className="rounded-2xl overflow-hidden">
                     <div className="border-b-4 border-b-primary">
                         <img src="https://shelly.merku.love/wp-content/uploads/2020/11/class8.png" className="w-full h-full object-cover" alt="" />
                     </div>
-                    <h6>Natural Sciences & Mathematics Courses</h6>
+                    <h6 className="hover:text-primary duration-200 my-4 text-secondary font-semibold text-xl">Natural Sciences & Mathematics Courses</h6>
                 </div>
 
 
             </SwiperSlide>
             <SwiperSlide>
 
-                <div className="">
+                <div className="rounded-2xl overflow-hidden">
                     <div className="border-b-4 border-b-primary">
                         <img src="https://shelly.merku.love/wp-content/uploads/2020/11/class8.png" className="w-full h-full object-cover" alt="" />
                     </div>
-                    <h6>Natural Sciences & Mathematics Courses</h6>
+                    <h6 className="hover:text-primary duration-200 my-4 text-secondary font-semibold text-xl">Natural Sciences & Mathematics Courses</h6>
                 </div>
 
 
             </SwiperSlide>
             <SwiperSlide>
 
-                <div className="">
+                <div className="rounded-2xl overflow-hidden">
                     <div className="border-b-4 border-b-primary">
                         <img src="https://shelly.merku.love/wp-content/uploads/2020/11/class8.png" className="w-full h-full object-cover" alt="" />
                     </div>
-                    <h6>Natural Sciences & Mathematics Courses</h6>
+                    <h6 className="hover:text-primary duration-200 my-4 text-secondary font-semibold text-xl">Natural Sciences & Mathematics Courses</h6>
                 </div>
 
 
             </SwiperSlide>
             
           </Swiper>
+        </div>
+
       </div>
     </div>
   );
